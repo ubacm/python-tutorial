@@ -38,7 +38,7 @@ You can define functions to provide the required functionality. Here are simple 
 
 An example of a function would be:
 ```python
-def print_oddly(myString):
+def print_oddly(my_string):
     """
     The function prints each letter of a string on a new line.
     myString: String variable of any size
@@ -48,18 +48,18 @@ def print_oddly(myString):
 
 print("I am outside the function!")
 
-myName = "Dan Starner"
+my_name = "Dan Starner"
 
-print_oddly(myName)
+print_oddly(my_name)
 ```
 
 * We define the function on the first line with the `def` keyword, followed by the name we want to give it - in this case `print_oddly`.
-* In the parenthesis, we list what variables we want to be passed when the function is called. Here it is `myString`.
+* In the parenthesis, we list what variables we want to be passed when the function is called. Here it is `my_string`.
 * We then declare the function docstring within the `"""`s. The docstring tells other programmers and readers what the function does.
-* Inside the function and indented 4 spaces, we place the codeblock that we want to run. In this case it is the `for` loop, that prints out each letter of `myString` on a separate line. Note how everything is indented 4 spaces PLUS what it normally would be.
+* Inside the function and indented 4 spaces, we place the codeblock that we want to run. In this case it is the `for` loop, that prints out each letter of `my_string` on a separate line. Note how everything is indented 4 spaces PLUS what it normally would be.
 * The `print()` statement at the bottom is NOT a part of the function. When the indenting stops, the function stops kind of like a conditional does.
-* Below the first `print()` statement, we define a variable `myName` and set it to a string.
-* On the last line of the code, we call the function with its name, parentheseses, and any arguments we have to pass it. When it hits this line, it will call the code within `print_oddly` with myString being set to the value of `myName`.
+* Below the first `print()` statement, we define a variable `my_name` and set it to a string.
+* On the last line of the code, we call the function with its name, parentheseses, and any arguments we have to pass it. When it hits this line, it will call the code within `print_oddly` with `my_string` being set to the value of `my_name`.
 
 Functions are **VERY** cool, because it should stop you from having to write the same line of code more than once. Let's 
 say you have to write out tons of words with the letters on different lines - why you would have to do this I have no idea - 
