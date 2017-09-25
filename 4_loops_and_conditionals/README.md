@@ -141,7 +141,7 @@ code_outside_of_loop
 # We're on time 1
 # We're on time 2
 for x in range(0, 3):
-    print "We're on time %d" % (x)
+    print("We're on time %d" % x)
     
     
 # Iterate through a list
@@ -168,9 +168,9 @@ Take the codeblock below, when a boolean expression is passed to the `if` statem
 ```python
 n = random.randInt(-10, 11)  # Pick a random number between -10 and 10.
 if n < 0:
-    print ("The absolute value of",n,"is",-n)
+    print("The absolute value of",n,"is",-n)
 else:
-    print ("The absolute value of",n,"is",n)
+    print("The absolute value of",n,"is",n)
 ```
 and that has the output of 
 ```
@@ -181,7 +181,7 @@ Integer? 1
 The absolute value of 1 is 1
 ```
 So what is going on? Python reads the line "if n < 0:". If n is less than zero Python runs the line 
-`print("The absolute value of",n,"is",-n)`. Otherwise python runs the line `print("The absolute value of",n,"is",n)`.
+`print("The absolute value of", n, "is", -n)`. Otherwise Python runs the line `print("The absolute value of", n, "is", n)`.
 
 More formally, Python looks at whether the expression `n < 0` is **True** or **False**. An if statement is followed by 
 an indented block of statements that are run when the expression is `True`. After the if statement is an optional 
@@ -198,11 +198,11 @@ a = 0
 while a < 10:
     a = a + 1
     if a > 5:
-        print (a,">",5)
+        print(a, ">", 5)
     elif a <= 7:
-        print (a,"<=",7)
+        print(a, "<=", 7)
     else:
-        print ("Neither test was true")
+        print("Neither test was true")
 ```
 With the output - Notice how the elif a <= 7 is only tested when the if statement fails to be true. elif allows 
 multiple tests to be done in a single if statement:
