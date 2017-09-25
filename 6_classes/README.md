@@ -13,11 +13,11 @@ already seen - integers, booleans, strings... - but there are also variables tha
 that can contain as much information as desired. Its a way to more easily represent the world around us.
 Think of any object, for this we will use a car. We can identity as few or as many ways to describe the car. 
 
-* Brand       - "Jeep"
-* Make        - "Liberty"
-* Year        - 2006
-* Owner       - "Daniel S"
-* # of Wheels - 4  --> You'll see why this is used.
+* Brand            - "Jeep"
+* Make             - "Liberty"
+* Year             - 2006
+* Owner            - "Daniel S"
+* Number of Wheels - 4 (you'll see why this is used)
 
 We COULD represent all those values as different variables, but that would get very hard to follow once you 
 introduce more and more cars...An easier way to handle all that data is to use a class! In Python and other 
@@ -27,7 +27,7 @@ view - before you can create Objects using it. The generic way to declare a clas
 new term 'kwargs' which will be explained after.*
 
 ```python
-class ClassName(object):  # Tell Python you want a class and give it a name
+class ClassName:  # Tell Python you want a class and give it a name
     
     constant_1 = "value_1"  # Declare any attributes you want all objects of that type to have.
     constant_2 = "value_2"
@@ -44,14 +44,14 @@ to find things, you use actual strings or objects to map from one thing to anoth
 
 ```python
 stuff = {'name': 'Zed', 'age': 39, 'height': 6 * 12 + 2}
-print stuff['name']
+print(stuff['name'])
 > Zed
-print stuff['age']
+print(stuff['age'])
 > 39
-print stuff['height']
+print(stuff['height'])
 > 74
 stuff['city'] = "San Francisco"
-print stuff['city']
+print(stuff['city'])
 > San Francisco
 ```
 
@@ -61,9 +61,9 @@ put new things into the dictionary with strings. It doesn't have to be strings t
 ```python
 stuff[1] = "Wow"
 stuff[2] = "Neato"
-print stuff[1]
+print(stuff[1])
 > Wow
-print stuff[2]
+print(stuff[2])
 > Neato
 print(stuff)
 > {'city': 'San Francisco', 2: 'Neato', 'name': 'Zed', 1: 'Wow', 'age': 39, 'height': 74}
@@ -78,9 +78,9 @@ And then to describe our car, we can create this:
 
 ```python
 # Declare the class with a name
-class Car(object):        # Declare a 'class' named 'Car' that is an 'object'
+class Car:        # Declare a 'class' named 'Car'
     
-    num_of_wheels = "4"   # The number of wheels the car has. All cars have 4 wheels, so this is 
+    num_of_wheels = 4     # The number of wheels the car has. All cars have 4 wheels, so this is 
                           # outside of the '__init__()' function because this value never changes.
                            
     def __init__(self, brand, make, year, owner, **kwargs):  # This function is called when you create an object of 
@@ -101,9 +101,9 @@ still being able to associate any other variables as well. So how would you use 
 ```python
 
 # Declare the class with a name
-class Car(object):        # Declare a 'class' named 'Car' that is an 'object'
+class Car:        # Declare a 'class' named 'Car'
     
-    num_of_wheels = "4"   # The number of wheels the car has. All cars have 4 wheels, so this is 
+    num_of_wheels = 4     # The number of wheels the car has. All cars have 4 wheels, so this is 
                           # outside of the '__init__()' function because this value never changes.
                            
     def __init__(self, brand, make, year, owner, **kwargs):  # This function is called when you create an object of 
@@ -124,10 +124,10 @@ def create_car():
     """
     This will call a bunch of inputs and return a new Car object
     """
-    brand = input("What is the brand of your Car?")
-    make = input("What is the make of your Car?")
-    year = input("What is the year of your Car?")
-    owner = input("What is your name?")
+    brand = input("What is the brand of your Car? ")
+    make = input("What is the make of your Car? ")
+    year = input("What is the year of your Car? ")
+    owner = input("What is your name? ")
     return Car(brand, make, year, owner)  # This will create a Car object based on what we have above
 
 my_first_car = create_car()  # Create one car using the function above
