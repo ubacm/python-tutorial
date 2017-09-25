@@ -191,7 +191,7 @@ print(my_list[2])
 
 To add to an existing list, use `list.append(some_value)`
 
-```
+```python
 my_list = [1, 10, 15]
 my_list.append(5)
 print(my_list)  # Will print "[1, 10, 15, 5]"
@@ -199,14 +199,14 @@ print(my_list)  # Will print "[1, 10, 15, 5]"
 
 To remove from an existing list, use `list.remove(some_value)`
 
-```
+```python
 my_list = [1, 10, 15]
 my_list.remove(10)
 print(my_list)  # Will print "[1, 15]"
 ```
 
 If you want the value returned back, use `list.pop(index)`
-```
+```python
 my_list = [1, 10, 15]
 my_num = my_list.pop(0)
 print(my_num)  # Will print "1"
