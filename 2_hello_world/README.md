@@ -85,10 +85,14 @@ len     equ $ - msg                             ;length of our dear string
 
 #### Dynamic Typing
 All programming languages let you allocate memory and save its value to something known as a **variable**. It works the 
-same way as in math class, the variable can be anything it just must be defined first before its used. Some languages 
-are *Typed* meaning that you have to explicitly say *"This variable is an Integer"* or *"This variable is a Word"*. 
-Python is Dynamically Typed, so you don't need to explicitly say what type a variable is. We'll sort this out more in a 
-few sections.
+same way as in math class; the variable can be anything it just must be defined first before its used.
+
+Some languages are *statically typed*, meaning that once you say define a variable as having a particular type 
+(e.g. integer or string), whether explicitly or implicitly, they cannot have their types changed. This will usually be 
+enforced with type checks performed by the compiler.
+
+Python is *dynamically typed*, so you can change the variable type by simply assigning the desired value. You don't need 
+to explicitly say what type a variable is in Python, though we'll revisit this idea in the next section.
 
 
 ## Try it Yourself
